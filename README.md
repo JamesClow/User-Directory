@@ -5,6 +5,9 @@
 - Delete users
 - Clean user experience
 
+## Target Users
+- System Admins
+
 ## Assumptions & Goals
 
 Organization may have a lot of users
