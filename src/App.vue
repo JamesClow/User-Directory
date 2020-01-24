@@ -6,7 +6,7 @@
     height: 100%;
     margin: 0px;
     padding: 0px;
-    font-size: 1px;
+    font-size: 14px;
     background-color: #fAfAfA;
     body{
       width: 100%;
@@ -25,17 +25,14 @@
 
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <user-directory></user-directory>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  import UserDirectory from "@/components/pages/UserDirectory.vue";
+  export default {
+    name: 'app',
+    components: { UserDirectory }
   }
-}
 </script>
