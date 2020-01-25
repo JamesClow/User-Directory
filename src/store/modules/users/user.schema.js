@@ -1,5 +1,9 @@
 export function newUser(){
   return {
+    "id": null,
+    "firstname": null,
+    "lastname": null,
+    "email": null,
     "account_locked": false,
     "activated": true,
     "addresses": [],
@@ -9,8 +13,6 @@ export function newUser(){
     "enable_managed_uid": false,
     "enable_user_portal_multifactor": false,
     "externally_managed": false,
-    "firstname": null,
-    "lastname": null,
     "ldap_binding_user": false,
     "mfa": {
         "exclusion": false,
@@ -30,7 +32,6 @@ export function newUser(){
     "password_expiration_date": null,
     "password_expired": false,
     "totp_enabled": false,
-    "_id": null,
-    "id": null
+    "_id": null
   }
 }
