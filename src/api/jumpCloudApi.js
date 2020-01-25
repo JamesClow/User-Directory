@@ -49,7 +49,7 @@ export function deleteUser(user){
   return new Promise((resolve, reject)=>{
     store.commit('confirm', {
       title: "Delete User?",
-      description: "This action is not reverible!",
+      description: "This action cannot be undone.",
       start_label: "Delete",
       start: ()=>{
         axios.delete("http://localhost:8005/api/systemusers/"+user.id).then(response=>{
