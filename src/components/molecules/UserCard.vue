@@ -17,11 +17,14 @@
       width: 40px;
       min-width: 40px;
       background-color: $b;
+      background: linear-gradient(0deg, #49a3df 0%, #6db5e5 100%);
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
+      overflow: hidden;
       .fa{
-        font-size: 18px;
+        margin-bottom: -4px;
+        font-size: 28px;
         color: $w;
       }
     }
