@@ -3,8 +3,11 @@
 </style>
 
 <template>
-  <div>
-    <btn type="fill"><span class="fal fa-plus"></span>Add User</btn>
+  <div class="list-controls">
+    <button-row>
+      <btn type="fill" @click="$store.set('users/newEditableUser')"><span class="far fa-plus"></span><span>Add User</span></btn>
+      <!-- <btn type="outline"><span class="far fa-search"></span><span>Search</span></btn> -->
+    </button-row>
   </div>
 </template>
 
