@@ -45,8 +45,7 @@
         }
         .overview-container{
           padding: 48px 32px 32px 72px;
-          min-width: 240px;
-          // 
+          width: 240px;
           .overview-col{
             height: 100%;
             .avatar { 
