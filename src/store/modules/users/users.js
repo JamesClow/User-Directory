@@ -18,6 +18,7 @@ const getters = {
   user: state => id => {
     return state.users[id]
   },
+  // Sort users by sort_type and sort_direction. Then filter users by search_input
   sorted_users: (state, getters) => {
     return Object.keys(state.users).map(id=>{
       return state.users[id];
@@ -46,8 +47,8 @@ const mutations = {
   ...make.mutations(['users', 'editable_user', 'sort_type', 'sort_direction', 'search_input']),
   setUser(state, user){
     Vue.set(state.users, user.id, user)
-    // state.users[user.id] = user;
   },
+  // Avoid mutation / delete operator so that Vue can detect changes
   deleteUser(state, user){
     state.users = Object.keys(state.users).filter(id=>{
       return id != user.id

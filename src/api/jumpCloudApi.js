@@ -3,6 +3,7 @@ import axios from 'axios';
 import store from "../store/index";
 import { newUser } from "@/store/modules/users/user.schema.js"
 
+// Get list of all avalible users
 export function getUserList(){
   return new Promise((resolve, reject)=>{
     axios.get("http://localhost:8005/api/systemusers").then(response=>{
@@ -17,6 +18,7 @@ export function getUserList(){
   })
 }
 
+// Upload a new user
 export function addNewUser(user){
   return new Promise((resolve, reject)=>{
     axios.post("http://localhost:8005/api/systemusers", user).then(response=>{
@@ -31,6 +33,7 @@ export function addNewUser(user){
   })
 }
 
+// Update an exisitng user
 export function updateUser(user){
   return new Promise((resolve, reject)=>{
     axios.put("http://localhost:8005/api/systemusers/"+user.id, user).then(response=>{
@@ -45,6 +48,7 @@ export function updateUser(user){
   })
 }
 
+// Perminetly remove a user
 export function deleteUser(user){
   return new Promise((resolve, reject)=>{
     store.commit('confirm', {
