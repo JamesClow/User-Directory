@@ -6,20 +6,28 @@ $b-10: #4292c8;
 $b-20: #3a82b2;
 $b-30: #33729c;
 
+$y30: #f5db8d;
+$y20: #f4d57c;
+$y10: #f2d06c;
+$y: #f1cb5b;
+$y-10: #d8b652;
+$y-20: #c1a249;
+$y-30: #a88e40;
+
 $w: #ffffff;
-$w-10: #e5e5e5;
-$w-20: #cccccc;
+$w-10: #f5f5f5;
+$w-20: #f0f0f0;
 $w-30: #b2b2b2;
 $w-40: #999999;
 $w-50: #7f7f7f;
 $w-60: #666666;
 
-$z_depth_0: 0rem 0rem 0rem #FFF;
-$z_depth_1: rgba(0, 0, 0, 0.117647) 0rem 1rem 6rem, rgba(0, 0, 0, 0.117647) 0rem 1rem 4rem;
-$z_depth_2: rgba(0, 0, 0, 0.156863) 0rem 3rem 10rem, rgba(0, 0, 0, 0.227451) 0rem 3rem 10rem;
-$z_depth_3: rgba(0, 0, 0, 0.188235) 0rem 10rem 30rem, rgba(0, 0, 0, 0.227451) 0rem 6rem 10rem;
-$z_depth_4: rgba(0, 0, 0, 0.247059) 0rem 14rem 45rem, rgba(0, 0, 0, 0.219608) 0rem 10rem 18rem;
-$z_depth_5: rgba(0, 0, 0, 0.298039) 0rem 19rem 60rem, rgba(0, 0, 0, 0.219608) 0rem 15rem 20rem;
+$z_depth_0: 0px 0px 0px #FFF;
+$z_depth_1: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+$z_depth_2: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px;
+$z_depth_3: rgba(0, 0, 0, 0.188235) 0px 10px 30px, rgba(0, 0, 0, 0.227451) 0px 6px 10px;
+$z_depth_4: rgba(0, 0, 0, 0.247059) 0px 14px 45px, rgba(0, 0, 0, 0.219608) 0px 10px 18px;
+$z_depth_5: rgba(0, 0, 0, 0.298039) 0px 19px 60px, rgba(0, 0, 0, 0.219608) 0px 15px 20px;
 
 $text: #3e444a;
 $text-light: #575f68;
@@ -27,6 +35,7 @@ $text-light: #575f68;
 $input: $b-20; 
 $input-placeholder: #AFAFBF;
 $input-boarder: #AFAFBF;
+$input-border-active: $b;
 
 $button: $b;
 $button-hover: $b-10;

@@ -1,9 +1,12 @@
 @import "~@/styles/constants";
 
 .card{
-  box-shadow: $z_depth_2;
+  box-shadow: $z_depth_1;
   border-radius: 2px;
   background-color: $w;
+  .card-content{
+    padding: 8px 16px;
+  }
 }
 
 .h1{
@@ -11,4 +14,17 @@
 }
 .h2{
   font-size: 16px;
+}
+
+.fade-enter-active{
+  transition: all 0.6s;
+}
+.fade-leave-active{
+  transition: all 0.4s;
+}
+.fade-enter{
+  opacity: 0;
+}
+.fade-leave-to{
+  opacity: 0;
 }
