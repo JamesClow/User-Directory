@@ -2,6 +2,12 @@
   @import "~@/styles/constants";
   .user-directory{
     padding: 60px;
+    .page-title{
+      // margin-bottom: 16px;
+    }
+    .edit-user{
+      z-index: 100;
+    }
   }
 </style>
 
@@ -10,17 +16,18 @@
     <div class="page-title h1">
       User Directory
     </div>
-    <list-control></list-control>
+    <transition name="fade">
+      <edit-user v-if="$store.get('users/adding_user') || $store.get('users/updating_user')" class="edit-user"></edit-user>
+    </transition>
     <user-list></user-list>
   </div>
 </template>
 
 <script>
   import EditUser from "@/components/organisms/EditUser.vue";
-  import ListControl from "@/components/molecules/ListControls.vue";
   import UserList from "@/components/organisms/UserList.vue";
   export default {
-    components: { ListControl, EditUser, UserList },
+    components: { EditUser, UserList },
     created(){
       console.log(this.$store)
       this.$store.dispatch("users/loadUsers")
