@@ -10,10 +10,11 @@ const state = {
   user_modification_type: null,
   adding_user: false,
   updating_user: false,
+  search_input: "",
 }
 
 const getters = {
-  ...make.getters(['users', 'editable_user', 'adding_user', 'updating_user']),
+  ...make.getters(['users', 'editable_user', 'adding_user', 'updating_user', 'search_input']),
   user: state => id => {
     return state.users[id]
   },
@@ -26,6 +27,14 @@ const getters = {
       }else{
         return a.id > b.id ? 1 : -1
       }
+    }).filter(user=>{
+      if(state.search_input){
+        return Object.keys(user).find(prop=>{
+          return user[prop] && typeof user[prop] == 'string' && user[prop].toLowerCase().indexOf(state.search_input.toLowerCase()) > -1;
+        })
+      }else{
+        return true
+      }
     })
   },
   user_count: (state, getters) => {
@@ -34,7 +43,7 @@ const getters = {
 }
 
 const mutations = {
-  ...make.mutations(['users', 'editable_user', 'sort_type', 'sort_direction']),
+  ...make.mutations(['users', 'editable_user', 'sort_type', 'sort_direction', 'search_input']),
   setUser(state, user){
     Vue.set(state.users, user.id, user)
     // state.users[user.id] = user;
