@@ -114,6 +114,7 @@ const actions = {
     return new Promise((resolve, reject)=>{
       deleteUser(user).then(user=>{
         commit("deleteUser", user);
+        commit("resetEditableUser");
         resolve(user);
       }).catch(response=>{
         console.error(response);
