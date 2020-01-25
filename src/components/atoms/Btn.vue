@@ -8,6 +8,7 @@
     padding: 6px 16px;
     color: $button;
     border-radius: 16px;
+    white-space: nowrap;
     &:hover{
       cursor: pointer;
       background-color: $button-light-hover;

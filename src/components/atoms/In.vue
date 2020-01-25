@@ -34,6 +34,9 @@
 <script>
   export default{
     props: ["value"],
+    created(){
+      this.value_copy = this.value;
+    },
     data(){
       return {
         value_copy: this.value,

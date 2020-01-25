@@ -4,6 +4,8 @@
     display: flex;
     align-items: center;
     position: relative;
+    // width: 100%;
+    flex: 1;
     .search-icon{
       position: absolute;
       top: 50%;
@@ -29,7 +31,7 @@
       justify-content: center;
       min-height: 16px;
       padding: 6px 34px;
-      min-width: 300px;
+      flex-basis: 300px;
       color: $input;
       border-radius: 16px;
       border: 1px solid $b;

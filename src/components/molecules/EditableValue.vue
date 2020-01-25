@@ -36,8 +36,8 @@
 
 <template>
   <div class="editable">
-    <span v-show="!edit_value" class="text">{{ value }}</span>
-    <in v-show="edit_value" v-model="new_value" class="input"></in>
+    <span v-if="!edit_value" class="text">{{ value }}</span>
+    <in v-if="edit_value" v-model="new_value" class="input"></in>
     <span v-show="!edit_value" class="edit fa fa-pen" @click="startEditing()"></span>
     <span v-show="edit_value"class="edit fa fa-times" @click="stopEditing()"></span>
   </div>
