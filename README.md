@@ -29,7 +29,7 @@ Allow for human error
 - Check before discarding updates
 - Show which fields have been modified
 
-Data should be copiable from list 
+Users should be able to copy data from list view
 - Overflow field when hovering over lengthy text
 
 ## Project setup
