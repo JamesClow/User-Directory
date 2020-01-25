@@ -8,10 +8,15 @@ Vue.use(Vuex)
 
 const store = {
   state: {
-    
+    confirmations: []
   },
   mutations: {
-    
+    confirm(state, alert){
+      state.confirmations.push(alert);
+    },
+    resolve(state){
+      state.confirmations.shift();
+    },
   },
   actions: {
     
