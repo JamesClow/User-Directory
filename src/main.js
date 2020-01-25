@@ -12,7 +12,7 @@ Vue.directive('click-outside', {
     setTimeout(()=>{
       el.clickOutsideEvent = event => {
         if(!(el == event.target || el.contains(event.target))){
-          binding.value();
+          binding.value(event);
         }
       };
       document.body.addEventListener('click', el.clickOutsideEvent)

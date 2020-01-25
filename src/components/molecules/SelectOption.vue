@@ -28,7 +28,7 @@
       user-select: none;
       font-size: 16px;
       border: 1px solid $w-10;
-      z-index: 1000;
+      z-index: 160;
       &.right{
         right: auto;
         left: 0px;

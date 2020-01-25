@@ -121,7 +121,7 @@
 <template>
   <div class="edit-user">
     <div class="overlay"></div>
-    <div class="card" v-click-outside="discardChanges">
+    <div class="card" v-click-outside="clickOutsideDiscardChanges">
       <div class="content">
         <div class="overview-container">
           <div class="overview-col">
@@ -201,8 +201,23 @@
           this.$store.dispatch('users/updateUser', this.user);
         }
       },
+      clickOutsideDiscardChanges(e){
+        document.getElementById('confirm-area').contains(e.target)
+      },
       discardChanges(){
-        this.$store.set('users/resetEditableUser')
+        if(this.edited){
+          this.$store.commit('confirm', {
+            title: "Dicard Changes?",
+            // description: "This action cannot be undone.",
+            start_label: "Discard",
+            start: ()=>{
+              this.$store.set('users/resetEditableUser')
+            },
+            stop: ()=>{}
+          });
+        }else{
+          this.$store.set('users/resetEditableUser')
+        }
       },
       deleteUser(){
         this.$store.dispatch('users/removeUser', this.user)
