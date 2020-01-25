@@ -25,14 +25,16 @@
 
 <template>
   <div id="app">
+    <confirmArea id="confirm-area"></confirmArea>
     <user-directory></user-directory>
   </div>
 </template>
 
 <script>
+  import ConfirmArea from '@/components/organisms/ConfirmArea.vue';
   import UserDirectory from "@/components/pages/UserDirectory.vue";
   export default {
     name: 'app',
-    components: { UserDirectory }
+    components: { UserDirectory, ConfirmArea }
   }
 </script>
