@@ -1,6 +1,8 @@
-import Vue from 'vue'
-import App from './App.vue'
-import store from './store'
+import Vue from 'vue';
+import App from './App.vue';
+import store from './store';
+import axios from 'axios';
+
 
 Vue.config.productionTip = false
 
@@ -32,6 +34,16 @@ Vue.mixin({
       });
     },
   }
+})
+
+axios.interceptors.request.use(request => {
+  console.log('Starting Request', request)
+  return request
+})
+
+axios.interceptors.response.use(response => {
+  console.log('Response:', response)
+  return response
 })
 
 new Vue({
